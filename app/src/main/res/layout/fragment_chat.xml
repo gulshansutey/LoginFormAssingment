@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ChatFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/rv_chat_list"
+            android:layout_above="@+id/rl_chat_box"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/rl_chat_box"
+            android:layout_alignParentBottom="true"
+            android:layout_height="80dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:id="@+id/et_chat"
+                android:maxLines="1"
+                android:layout_toLeftOf="@+id/floatingActionButton"
+                android:layout_toStartOf="@+id/floatingActionButton"
+                android:layout_height="wrap_content" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                app:fabSize="mini"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@android:drawable/ic_menu_send" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>
